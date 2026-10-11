@@ -1,0 +1,55 @@
+:root {
+  --bg: #faf7f2; --card: #fff; --sand: #efe7da; --rose: #d9a5a5; --rose-d: #b87878; --sage: #8fa58b; --sage-d: #5f7a5b;
+  --ink: #3a3631; --muted: #7d766d; --line: #e6ddd0; --err: #a5473f; color-scheme: light;
+}
+* { box-sizing: border-box }
+body { margin: 0; background: var(--bg); color: var(--ink); font: 16px/1.5 Lato, system-ui, sans-serif }
+h1, h2, h3 { font-family: 'Cormorant Garamond', Georgia, serif; font-weight: 600; margin: 0 }
+h1 { font-size: 2.2rem } h2 { font-size: 1.5rem; margin: 1.8rem 0 .6rem } h3 { font-size: 1.25rem }
+.wrap { max-width: 1080px; margin: 0 auto; padding: 1.2rem 1rem 3rem }
+.top { display: flex; flex-wrap: wrap; gap: .5rem 1rem; align-items: center; padding: .6rem 1rem; background: #fff; border-bottom: 1px solid var(--line) }
+.top nav { display: flex; flex-wrap: wrap; gap: .25rem; flex: 1 }
+.top nav button, .brand, .link { background: none; border: 0; font: inherit; cursor: pointer; color: var(--ink); padding: .4rem .7rem; border-radius: 8px }
+.top nav button.on { background: var(--sand) }
+.brand { font: 600 1.4rem 'Cormorant Garamond', serif; color: var(--rose-d) }
+.link { color: var(--sage-d); text-decoration: underline }
+:focus-visible { outline: 2px solid var(--sage-d); outline-offset: 2px }
+.btn { border: 1px solid var(--line); background: #fff; color: var(--ink); padding: .5rem .9rem; border-radius: 8px; cursor: pointer; font: inherit; display: inline-block }
+.btn:hover { background: var(--sand) } .btn:disabled { opacity: .5; cursor: default }
+.btn.primary { background: var(--sage-d); border-color: var(--sage-d); color: #fff } .btn.primary:hover { background: #4d664a }
+.btn.danger { color: var(--err) } .btn.small { padding: .3rem .7rem; font-size: .9rem }
+.page-head { display: flex; justify-content: space-between; align-items: center; gap: 1rem; margin-bottom: 1rem; flex-wrap: wrap }
+.toolbar { display: flex; gap: .6rem; flex-wrap: wrap; margin: 1rem 0 }
+input, select, textarea { font: inherit; padding: .5rem .6rem; border: 1px solid var(--line); border-radius: 8px; background: #fff; color: var(--ink); width: 100% }
+.toolbar input { flex: 1 1 200px; width: auto } .toolbar select { width: auto }
+.grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 1rem }
+.card { background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 1rem; display: flex; flex-direction: column; gap: .5rem }
+.card dl { margin: 0 } .card dl div { display: flex; gap: .5rem; font-size: .93rem } .card dt { color: var(--muted); min-width: 7.5rem } .card dd { margin: 0; overflow-wrap: anywhere }
+.badges { display: flex; flex-wrap: wrap; gap: .3rem } .badge { background: var(--sand); border-radius: 99px; padding: .1rem .65rem; font-size: .82rem }
+.actions { display: flex; gap: .5rem; flex-wrap: wrap; align-items: center; margin-top: auto } .actions.end { justify-content: flex-end }
+.stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); gap: .8rem; margin: 1rem 0 }
+.stats > * { background: #fff; border: 1px solid var(--line); border-radius: 12px; padding: .9rem 1rem; text-align: left; font: inherit; color: inherit; display: flex; flex-direction: column }
+.stats button { cursor: pointer } .stats b { font: 600 1.7rem 'Cormorant Garamond', serif; color: var(--sage-d) } .stats span { color: var(--muted); font-size: .88rem }
+.neg { color: var(--err) !important } .muted { color: var(--muted) } .center { text-align: center; padding: 3rem }
+.empty { background: #fff; border: 1px dashed var(--line); border-radius: 12px; padding: 1.5rem; color: var(--muted); text-align: center }
+.alert { background: #f8e9e7; color: var(--err); border-radius: 8px; padding: .5rem .8rem; margin: .6rem 0 }
+.hero { background: linear-gradient(135deg, #f3e3e0, #e8eee4); border-radius: 16px; padding: 1.6rem; margin-bottom: 1rem }
+.inline { display: flex; gap: .6rem; align-items: flex-end; flex-wrap: wrap; margin: .8rem 0 } .inline label { max-width: 240px }
+label { display: block; margin-bottom: .7rem } label > span { display: block; font-size: .88rem; color: var(--muted); margin-bottom: .2rem }
+label.check { display: flex; gap: .5rem; align-items: center } label.check input { width: auto } label.check > span { margin: 0 } label.small { margin: 0; font-size: .9rem }
+.list { list-style: none; padding: 0; margin: 0; background: #fff; border: 1px solid var(--line); border-radius: 12px }
+.list li { display: flex; justify-content: space-between; gap: 1rem; padding: .7rem 1rem; border-bottom: 1px solid var(--line) } .list li:last-child { border: 0 }
+.quick { display: flex; gap: .5rem; flex-wrap: wrap }
+.overlay { position: fixed; inset: 0; background: rgba(58,54,49,.35); display: flex; align-items: center; justify-content: center; padding: 1rem; z-index: 10; overflow: auto }
+.overlay.dark { background: rgba(30,28,25,.8) }
+.modal { background: #fff; border-radius: 14px; padding: 1.4rem; width: 100%; max-width: 480px; max-height: 92vh; overflow: auto } .modal h2 { margin: 0 0 1rem }
+.login { min-height: 100vh; display: flex; align-items: center; justify-content: center; padding: 1rem } .login .modal { display: flex; flex-direction: column; gap: .5rem }
+.thumbs { display: flex; gap: .4rem; flex-wrap: wrap; margin-bottom: .5rem } .thumb { padding: 0; border: 0; background: none; cursor: pointer }
+.thumb img { width: 64px; height: 64px; object-fit: cover; border-radius: 8px; display: block }
+.lightbox { max-width: 900px; width: 100%; display: flex; flex-direction: column; gap: .8rem; align-items: center }
+.lightbox img { max-width: 100%; max-height: 72vh; border-radius: 10px } .lightbox .actions { color: #fff; justify-content: center }
+.compare { overflow-x: auto; background: #fff; border: 1px solid var(--line); border-radius: 12px; margin-bottom: 1rem }
+.compare table { border-collapse: collapse; width: 100%; min-width: 420px } .compare th, .compare td { padding: .6rem .8rem; text-align: left; border-bottom: 1px solid var(--line); font-size: .93rem }
+code { background: var(--sand); padding: 0 .3rem; border-radius: 4px }
+@media (max-width: 600px) { h1 { font-size: 1.8rem } .top nav { order: 3; flex-basis: 100%; overflow-x: auto; flex-wrap: nowrap } .top nav button { white-space: nowrap } }
+@media (prefers-reduced-motion: reduce) { * { transition: none !important; animation: none !important } }
